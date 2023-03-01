@@ -1,5 +1,5 @@
 {
-  "name": "nest-telegram-bot-sender",
+  "name": "telegram-microservice-test",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "concurrently \"npm run start:telegram-microservice-test\" \"npm run start:app\"",
+    "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -17,24 +17,20 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "start:telegram-microservice-test": "nest start --watch telegram-microservice-test"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@nestjs/axios": "^2.0.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
-    "@nestjs/microservices": "^9.3.9",
     "@nestjs/platform-express": "^9.0.0",
     "axios": "^1.3.4",
-    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "nestjs-pino": "^3.1.2",
     "pino-http": "^8.3.3",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0",
-    "telegram-microservice-test": "./telegram-microservice-test"
+    "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
